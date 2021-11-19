@@ -358,7 +358,8 @@ def funding_allocation():
       connection.commit()
       cursor.close()
 
-
+      if os.path.exists("update.csv"):
+          os.remove("update.csv")
 
 
         # cursor.execute('INSERT INTO testcsv(names, \
