@@ -339,7 +339,7 @@ def funding_allocation():
       with connection.cursor() as cursor: 
         for index, row in enumerate(csv_data):
 
-          sql = "UPDATE atldot_bus_table SET ada_access = '"+ str(row[0])+ "', facing_dir = '"+ str(row[3])+"', position = '"+ str(row[4])+"', ridership_data = '"+str(ridershipcsv[index])+"', ridership_quintile = '"+str(ridership2[index])+"', stop_name = '"+str(row[2])+"', tier = '"+str(amenityscore[index])+"' WHERE stop_id = "+str(row[1])
+          sql = "UPDATE atldot_bus_table SET ada_access = '"+ str(row[0])+ "', facing_dir = '"+ str(row[3])+"', position = '"+ str(row[4])+"', ridership_data = "+str(ridershipcsv[index])+", ridership_quintile = "+str(ridership2[index])+", stop_name = '"+str(row[2])+"', tier = "+str(amenityscore[index])+" WHERE stop_id = "+str(row[1])
           print(sql)
           cursor.execute(sql)
 
