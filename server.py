@@ -329,7 +329,7 @@ def funding_allocation():
 
 
       df=df.drop(remove_row,axis=0)
-      df2=pd.Dataframe()
+      df2=pd.DataFrame()
       df2['ADA_ACCESS']=df['ADA_ACCESS']
       df2['StopAbbr']=df['StopAbbr']
       df2['StopName']=df['StopName']
