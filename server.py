@@ -19,11 +19,11 @@ def funding_allocation():
 
   if 'submit_button3' in request.form:
       if request.method == 'POST':
-          if os.path.exists("/home/atldotupdate/DBUpdate/update.csv"):
-              os.remove("/home/atldotupdate/DBUpdate/update.csv")
+          if os.path.exists("update.csv"):
+              os.remove("update.csv")
           try:
               f = request.files['file']
-              print(f.filename)
+              #print(f.filename)
               f.save(f.filename)
           except:
               return render_template('index.html', result=None)
@@ -154,7 +154,7 @@ def funding_allocation():
               remove_row.append(i)
 
       remove_row = list(dict.fromkeys(remove_row))
-      print(remove_row)
+      #print(remove_row)
 
       remove_row_message = []
       for i in remove_row:
