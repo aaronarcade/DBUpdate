@@ -335,7 +335,7 @@ def funding_allocation():
       df2['StopName']=df['StopName']
       df2['FacingDir']=df['FacingDir']
       df2['Position']=df['Position']
-      csv_data = df.values.tolist()
+      csv_data = df2.values.tolist()
       with connection.cursor() as cursor: 
         for index, row in enumerate(csv_data):
 
